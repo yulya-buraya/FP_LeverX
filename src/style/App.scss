@@ -1,0 +1,35 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+body {
+	margin: 0;
+	padding: 0;
+	@include size(100vh, 100vw);
+}
+
+.container {
+	display: grid;
+	position: relative;
+	grid-template-areas:
+		"header  header"
+		"vacation leave-requests"
+		"vacation-request leave-requests";
+	grid-template-columns: 590px 675px;
+	grid-template-rows: 68px 125px auto;
+	grid-gap: 10px;
+	@include size(950px, 1440px);
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $var1;
+}
+
+#root {
+	@include size(100vh, 100vw);
+	min-width: 1440px;
+}
+
+br,
+span {
+	margin: 0;
+	padding: 0;
+}

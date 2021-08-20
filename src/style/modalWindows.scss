@@ -1,0 +1,243 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.modal {
+	z-index: 1;
+	background-color: rgba(50, 50, 50, 0.469);
+	@include size(100%, 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s;
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
+.modal-confirm-block {
+	position: relative;
+	@include border(none, none, 10px, border-box);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include size(269px, 500px);
+	background-color: $var4;
+}
+
+.holiday-modal-block,
+.too-long-vacation-block {
+	position: relative;
+	@include border(none, none, 10px, border-box);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include size(279px, 500px);
+	background-color: $var4;
+}
+
+.modal-dublicate-block {
+	position: relative;
+	@include border(none, none, 10px, border-box);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include size(289px, 500px);
+	background: $var4;
+}
+
+.less-two-week-block {
+	position: relative;
+	@include border(none, none, 10px, border-box);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include size(309px, 500px);
+	background: $var4;
+}
+
+.less-two-week-text {
+	position: relative;
+	margin: 24px 46px 0 30px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: -0.313529px;
+	color: $var11;
+}
+
+.header-for-form {
+	position: relative;
+	@include size(60px, inherit);
+	background: $var12;
+	border-radius: 10px 10px 0px 0px;
+	outline: none;
+	border-bottom: 1px solid $var13;
+}
+
+.header-form-title {
+	position: absolute;
+	border-top: none;
+	height: 24px;
+	margin: 20px 0 18px 25px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 23px;
+	letter-spacing: -0.535px;
+	word-spacing: 1px;
+	color: $var2;
+}
+
+.footer-for-form {
+	position: absolute;
+	bottom: 0px;
+	@include size(60px, 100%);
+	background: $var12;
+	border-radius: 0px 0px 10px 10px;
+	border-top: 1px solid $var13;
+}
+.confirm-btn {
+	cursor: pointer;
+	display: inline-block;
+	@include size(36px, 90px);
+	background: $var8;
+	@include border(none, 1px solid $var14, 3px, border-box);
+	@include font(12px, normal, normal, $var4, 17px, -0.29px);
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 9px;
+	padding-bottom: 8px;
+	margin: 13px 30px 13px 6px;
+	float: right;
+}
+
+.modal-cancel-btn {
+	display: inline-block;
+	@include size(36px, 80px);
+	background: $var4;
+	@include border(none, 1px solid $var15, 3px, border-box);
+	@include font(12px, normal, normal, $var11, 17px, -0.29px);
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 9px;
+	padding-bottom: 8px;
+	margin: 13px auto 13px 294px;
+	cursor: pointer;
+}
+
+.text-for-modal-window {
+	position: relative;
+	margin: 22px 0 0 30px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+	letter-spacing: -0.31px;
+	color: $var11;
+}
+
+.too-long-request-item,
+.current-request-item,
+.dublicate-request-item {
+	position: relative;
+	@include size(max-content, max-content);
+}
+
+.less-two-week-request-item {
+	margin: 12px 0 27px 27px;
+	float: left;
+}
+
+.holiday-request-item,
+.dublicate-request-item {
+	margin: 24px 0 27px 27px;
+	float: left;
+}
+
+.too-long-request-item {
+	margin: 24px 0 0 27px;
+}
+
+.current-request-item {
+	margin: 22px 0 0 27px;
+}
+
+.current-name-request {
+	margin: 13px 0 0 15px;
+	position: relative;
+	float: right;
+	width: max-content;
+	@include font(15px, normal, 600, $var11, 20px, -0.36px);
+}
+
+.holiday-current-name-request,
+.too-long-current-name-request,
+.dublicate-name-request {
+	margin: 17px 0 0 15px;
+	position: relative;
+	float: right;
+	width: max-content;
+	@include font(15px, normal, 600, $var11, 20px, -0.36px);
+}
+
+.current-request {
+	@include size(max-content, max-content);
+	position: relative;
+	top: 122px;
+	left: 27px;
+}
+
+.ok-btn {
+	cursor: pointer;
+	display: inline-block;
+	@include size(36px, 90px);
+	background: $var4;
+	@include border(none, 1px solid $var15, 3px, border-box);
+	@include font(12px, normal, normal, $var11, 17px, -0.29px);
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 9px;
+	padding-bottom: 8px;
+	margin: 13px 30px 13px 6px;
+	float: right;
+}
+
+.important-text-for-modal-window {
+	width: inherit;
+	margin: 22px 60px 0 30px;
+	@include font(13px, normal, 600, $var16, 18px, -0.31px);
+}
+
+.confirm-anyway-btn {
+	cursor: pointer;
+	display: inline-block;
+	@include size(34px, 140px);
+	background: $var4;
+	@include border(none, 1px solid $var15, 3px, border-box);
+	@include font(12px, normal, normal, $var11, 17px, -0.29px);
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 9px;
+	padding-bottom: 8px;
+	margin: 13px 0 0 194px;
+}
+
+.change-dates-btn {
+	cursor: pointer;
+	display: inline-block;
+	@include size(34px, 130px);
+	background: $var8;
+	@include border(none, 1px solid $var14, 3px, border-box);
+	@include font(12px, normal, normal, $var4, 17px, -0.29px);
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 9px;
+	padding-bottom: 8px;
+	margin: 13px 30px 13px 6px;
+	float: right;
+}

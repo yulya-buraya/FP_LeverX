@@ -1,0 +1,141 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+.header {
+	grid-area: header;
+	filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.1));
+
+	&-content {
+		position: absolute;
+		@include size(68px, 1200px);
+		top: 0%;
+		bottom: 0%;
+		background-color: $var7;
+		padding: 0 120px;
+	}
+
+	&-slider {
+		position: absolute;
+		@include size(4px, 1200px);
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0px;
+		background-color: $var10;
+		padding: 0 120px;
+	}
+
+	&-subtitle-img {
+		display: table-row;
+		margin-top: 2px;
+	}
+	&-title-img {
+		margin: 6px 0 1px 0;
+		display: table-row;
+	}
+
+	&-tabs {
+		position: absolute;
+		left: 39.4%;
+		right: 44.27%;
+		top: 35.29%;
+		bottom: 0%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 18px;
+
+		& > input[type="radio"] {
+			display: none;
+
+			&:checked + label {
+				cursor: default;
+				color: white;
+			}
+		}
+
+		& > label {
+			vertical-align: top;
+			user-select: none;
+			cursor: pointer;
+			color: rgba(246, 248, 253, 0.3);
+		}
+	}
+
+	&-btn-message {
+		position: absolute;
+		@include size(32px, 32px);
+		left: calc(50% - 32px / 2 + 364px);
+		top: 18px;
+		background-color: $var10;
+		border-radius: 23px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			position: absolute;
+			@include size(24px, 24px);
+			outline: none;
+		}
+	}
+
+	&-btn-exit {
+		position: absolute;
+		@include size(32px, 32px);
+		left: calc(50% - 32px / 2 + 568px);
+		top: 18px;
+		background-color: $var10;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 23px;
+	}
+
+	&-btn-current-user {
+		position: absolute;
+		@include size(32px, 124px);
+		left: calc(50% - 124px / 2 + 458px);
+		top: 18px;
+		background-color: $var10;
+		border-radius: 23px;
+	}
+}
+
+.text-header {
+	position: relative;
+	left: 1.25%;
+	right: 86.2%;
+	top: 25%;
+	bottom: 23.53%;
+}
+
+.tab-selector {
+	@include size(4px, 110px);
+	position: absolute;
+	left: 700px;
+	background-color: $var8;
+	border-radius: 3px;
+}
+
+.avatar-current-user {
+	float: left;
+	margin: 2px;
+	border-radius: 25px;
+	@include size(28px, 28px);
+}
+
+.opacity {
+	background-color: linear-gradient(180deg, rgba(32, 75, 146, 0.0001) 0%, rgba(32, 75, 146, 0.08) 100%);
+	opacity: 1;
+	z-index: 1;
+	border-radius: 25px;
+}
+
+.current-user-name {
+	@include font(10px, normal, 700, $var4, 13px, normal);
+	text-transform: uppercase;
+	display: flex;
+	float: right;
+	margin: 10px 18px 0 0;
+}

@@ -1,0 +1,154 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+* {
+	font-family: "Open Sans", sans-serif;
+}
+
+.vacation-block-info {
+	grid-area: vacation;
+	position: relative;
+	left: 120px;
+	width: 470px;
+	background: $var4;
+	box-shadow: 0px 1px 3px rgba(32, 75, 146, 0.15);
+	border-radius: 5px;
+}
+
+.btn-more-details {
+	cursor: pointer;
+	position: absolute;
+	background: $var1;
+	border-radius: 0px 0px 5px 5px;
+	@include size(26px, inherit);
+	display: inline-block;
+	bottom: 0;
+	vertical-align: middle;
+}
+
+.btn-details-text {
+	position: relative;
+	width: inherit;
+	text-align: center;
+
+	div {
+		display: inline-block;
+		margin-right: 9.2px;
+	}
+}
+
+.icon-more {
+	position: absolute;
+	top: 1px;
+	left: 41.5%;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	@include font(13px, normal, normal, $var9, 18px, normal);
+	margin-top: 4px;
+}
+
+.text-more-details {
+	position: absolute;
+	left: 45%;
+	top: 6px;
+	vertical-align: middle;
+	@include font(10px, normal, normal, $var9, 14px, normal);
+}
+
+.vacation-days-label {
+	position: absolute;
+	left: 6%;
+	top: 25%;
+	width: max-content;
+	@include font(18px, normal, 600, $var2, 24px, 0.13px);
+}
+
+.available-label {
+	position: absolute;
+	left: 6.2%;
+	top: 53.2%;
+	@include font(13px, normal, normal, $var2, 18px, normal);
+}
+
+.count-days-label {
+	@include font(13px, normal, normal, $var2, 18px, normal);
+	position: absolute;
+	right: 6.7%;
+	top: 53.3%;
+}
+
+.vacation-hr {
+	position: absolute;
+	width: 100%;
+	bottom: 18px;
+	border: 1px solid $var6;
+	background: $var6;
+}
+
+.list-row {
+	position: relative;
+	@include size(94px, inherit);
+	background: white;
+	border-bottom: 1px solid $var6;
+	box-sizing: border-box;
+	cursor: pointer;
+
+	&:nth-child(2n) {
+		background: $var1;
+	}
+}
+
+.years-field {
+	background: $var8;
+	@include size(22px, inherit);
+	box-sizing: border-box;
+
+	span {
+		margin: 3px 0 0 30px;
+		padding-top: 3px 0px;
+		position: absolute;
+		@include font(12px, normal, 600, $var4, 15px, -0.29px);
+		width: max-content;
+	}
+
+	span {
+		margin: 3px 0 0 30px;
+		padding-top: 3px 0px;
+		position: absolute;
+		@include font(12px, normal, 600, $var4, 15px, -0.29px);
+		width: max-content;
+	}
+}
+
+.request-icon {
+	margin: 15px 0 0 26px;
+}
+
+.name-request {
+	position: absolute;
+	top: 13px;
+	margin-left: 14px;
+	height: 20px;
+	@include font(15px, normal, 600, $var2, 21px, normal);
+}
+
+.date-create {
+	position: absolute;
+	@include font(12px, normal, normal, $var2, 17px, normal);
+	margin: 36px 0 0 14px;
+}
+
+.status-request {
+	position: absolute;
+	margin: 58px 0 0 14px;
+	@include font(12px, italic, 600, $var17, 17px, normal);
+}
+
+.icon-arrow {
+	position: absolute;
+	margin-top: 16px;
+	right: 29px;
+}

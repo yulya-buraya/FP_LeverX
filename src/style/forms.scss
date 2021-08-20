@@ -1,0 +1,487 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.background-block {
+	z-index: 1;
+	background-color: rgba(50, 50, 50, 0.469);
+	@include size(100%, 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+.pending-approval-header {
+	position: relative;
+	@include size(60px, inherit);
+	background: $var1;
+	border-radius: 10px 10px 0px 0px;
+	outline: none;
+	border-bottom: 1px solid $var13;
+}
+
+.pending-approval-block {
+	position: relative;
+	@include border(none, none, 10px, border-box);
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include size(710px, 500px);
+	background: $var4;
+}
+
+.pending-approval-header {
+	position: relative;
+	@include size(60px, inherit);
+	background: $var1;
+	border-radius: 10px 10px 0px 0px;
+	outline: none;
+	border-bottom: 1px solid $var6;
+}
+
+.pending-approval-header-title {
+	position: absolute;
+	border-top: none;
+	height: 24px;
+	margin: 20px 0 18px 25px;
+	@include font(16px, normal, 400, $var2, 23px, (-0.39px));
+}
+
+.copy-icon {
+	position: absolute;
+	margin: 20px 0 16px 181px;
+}
+
+.own-copy-icon {
+	position: absolute;
+	margin: 20px 0 16px 271px;
+}
+
+.pending-approval-footer {
+	position: absolute;
+	bottom: 0px;
+	@include size(60px, 100%);
+	background: $var1;
+	border-radius: 0px 0px 10px 10px;
+	border-top: 1px solid $var13;
+}
+
+.cancel-btn {
+	display: inline-block;
+	cursor: pointer;
+	@include size(36px, 130px);
+	@include font(12px, normal, 600, $var7, 20px, 0.01em);
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	box-sizing: border-box;
+	margin: 9px 0 14px 166.5px;
+	padding-top: 10px;
+	padding-bottom: 11px;
+}
+
+.decline-btn {
+	display: inline-block;
+	@include size(36px, 130px);
+	@include font(12px, normal, 600, $var7, 20px, 0.01em);
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	box-sizing: border-box;
+	margin: 9px 6px 14px 160px;
+	padding-top: 10px;
+	padding-bottom: 11px;
+	cursor: pointer;
+}
+
+.change-btn {
+	display: inline-block;
+	cursor: pointer;
+	@include size(36px, 80px);
+	box-sizing: border-box;
+	@include font(12px, normal, 600, $var7, 20px, 0.01em);
+	text-align: center;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding-top: 11px;
+	padding-bottom: 10px;
+	margin: 9px 0 14px 0;
+}
+
+.close-btn {
+	cursor: pointer;
+	display: inline-block;
+	@include size(36px, 90px);
+	box-sizing: border-box;
+	background: $var8;
+	border-radius: 3px;
+	vertical-align: middle;
+	@include font(12px, normal, 600, $var4, 20px, 0.01em);
+	text-transform: uppercase;
+	padding-top: 9px;
+	padding-bottom: 14px;
+	padding-left: 40px;
+	margin: 11px 30px 13px 0px;
+	float: right;
+}
+
+.request-item {
+	position: relative;
+	display: flex;
+	border-bottom: 1px solid $var6;
+	@include size(118px, inherit);
+	box-sizing: border-box;
+}
+
+.own-request-item {
+	position: relative;
+	border-bottom: 1px solid $var6;
+	@include size(138px, inherit);
+	box-sizing: border-box;
+}
+
+.request-info {
+	float: right;
+	margin: 16px 46px 0 15px;
+	max-width: 362px;
+}
+
+.sick-request-info {
+	float: right;
+	margin: 18px 46px 0 15px;
+	max-width: 362px;
+}
+
+.own-request-info {
+	float: right;
+	margin: 17px 46px 0 1px;
+	max-width: 362px;
+}
+
+.request-icon-form {
+	@include size(50px, 50px);
+	float: left;
+	margin: 21.17px 0 0 27px;
+}
+
+.name-request-form,
+.own-name-form,
+.sick-name-form {
+	position: relative;
+	display: inline-block;
+	@include font(15px, normal, 600, $var2, 20px, -0.36px);
+}
+.own-date-form {
+	position: relative;
+	width: max-content;
+	margin-top: 5px;
+	@include font(12px, normal, 400, $var2, 17px, -0.29px);
+}
+
+.date-create-form {
+	position: relative;
+	margin-top: 0px;
+	width: max-content;
+	@include font(12px, normal, 400, $var2, 17px, -0.29px);
+}
+.own-status-form {
+	position: relative;
+	width: max-content;
+	margin-top: 13px;
+	@include font(12px, italic, 600, $var9, 17px, -0.29px);
+}
+
+.status-request-form {
+	margin-top: 10px;
+	width: max-content;
+	position: relative;
+	@include font(12px, italic, 600, $var9, 17px, -0.29px);
+}
+
+.subtitle-block {
+	margin-left: 30px;
+	@include font(12px, normal, 600, $var9, 17px, -0.29px);
+	text-transform: uppercase;
+}
+
+.current-approvers-block {
+	position: relative;
+	display: inline-block;
+	margin-top: 22px;
+	@include size(max-content, 100%);
+}
+
+.own-current-block {
+	position: relative;
+	display: inline-block;
+	@include size(max-content, 100%);
+	margin-top: 21px;
+}
+
+.approved-block {
+	position: relative;
+	margin-top: 15px;
+	display: inline-block;
+	@include size(max-content, 100%);
+}
+
+.own-approved-block {
+	position: relative;
+	display: inline-block;
+	margin-top: 14px;
+	@include size(max-content, 100%);
+}
+
+.approved-item {
+	position: relative;
+	@include size(34px, 100%);
+	margin-top: 11px;
+}
+
+.approved-icon {
+	margin-left: 30px;
+}
+
+.name-employee {
+	margin-left: 15px;
+	position: absolute;
+	@include font(13px, normal, 600, $var2, 14px, -0.31px);
+	text-decoration-line: underline;
+}
+
+.comments-approved {
+	position: absolute;
+	@include size(17px, max-content);
+	@include font(12px, italic, 400, $var2, 17px, -0.29px);
+	margin: 16px 0 0 15px;
+}
+
+.user-confirmed-item {
+	position: relative;
+	@include size(32px, 100%);
+	margin-top: 9px;
+}
+
+.name-user-confirmed {
+	margin-left: 15px;
+	position: absolute;
+	top: 5px;
+	display: inline-block;
+	@include font(13px, normal, 600, $var2, 18px, -0.31px);
+	text-decoration-line: underline;
+}
+
+.user-confirmed-icon {
+	margin-left: 30px;
+	width: 32px;
+}
+
+.next-approvers-block {
+	position: relative;
+	display: inline-block;
+	@include size(max-content, 100%);
+	margin-top: 21px;
+}
+
+.own-next-block {
+	position: relative;
+	display: inline-block;
+	@include size(max-content, 100%);
+	margin-top: 21px;
+}
+
+.final-step-block {
+	position: relative;
+	display: inline-block;
+	@include size(max-content, 100%);
+	margin-top: 21px;
+}
+
+.own-final-block {
+	position: relative;
+	display: inline-block;
+	@include size(max-content, 100%);
+	margin-top: 22px;
+}
+
+.sick-pending-approval-block,
+.vacation-change-block {
+	position: relative;
+	@include size(530px, 500px);
+	background: $var4;
+	@include border(none, none, 10px, border-box);
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.notified-users-block {
+	margin-top: 22.17px;
+	position: relative;
+	display: inline-block;
+	@include size(max-content, 100%);
+}
+
+.sick-final-block {
+	margin-top: 19px;
+	position: relative;
+	display: inline-block;
+	@include size(max-content, 100%);
+}
+
+.sick-copy-icon {
+	position: relative;
+	margin: 21px 0 16px 161px;
+}
+
+.sick-margin,
+.own-margin,
+.vacation-margin {
+	margin-bottom: 10px;
+}
+
+.vacation-form-block {
+	margin-top: 16px;
+	position: relative;
+	display: inline-block;
+	@include size(max-content, 100%);
+}
+
+.vacation-comment {
+	position: absolute;
+	height: max-content;
+	margin-top: 209px;
+}
+
+.own-change-block {
+	@include size(550px, 500px);
+	background: $var4;
+	@include border(none, none, 10px, border-box);
+	position: relative;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.sick-change-block {
+	@include size(600px, 500px);
+	background: $var4;
+	border-radius: 10px;
+	position: relative;
+	@include border(none, none, 10px, border-box);
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.vc-cancel-btn {
+	cursor: pointer;
+	display: inline-block;
+	@include size(36px, 90px);
+	@include font(12px, normal, 600, $var7, 20px, 0.01em);
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	box-sizing: border-box;
+	margin: 9px 0 14px 290px;
+	padding-top: 10px;
+	padding-bottom: 11px;
+}
+
+.save-btn {
+	cursor: pointer;
+	display: inline-block;
+	@include size(36px, 90px);
+	@include border(none, none solid $var15, 3px, border-box);
+	background: $var8;
+	vertical-align: middle;
+	@include font(12px, normal, 600, $var4, 20px, 0.01em);
+	text-transform: uppercase;
+	padding-top: 9px;
+	text-align: center;
+	padding-bottom: 14px;
+	margin: 11px 30px 13px 0px;
+	float: right;
+}
+
+.own-date-create {
+	position: relative;
+	margin-top: 4px;
+	width: max-content;
+	@include font(12px, normal, 400, $var2, 17px, -0.3px);
+}
+
+.sick-icon,
+.own-icon {
+	@include size(50px, 50px);
+	float: left;
+	margin-left: 30px;
+}
+
+.sick-icon {
+	margin-top: 23.5px;
+}
+
+.own-icon {
+	margin-top: 23px;
+}
+.sick-date-form {
+	position: relative;
+	width: max-content;
+	@include font(12px, normal, 400, $var2, 17px, -0.29px);
+}
+
+.sick-status-form {
+	position: relative;
+	width: max-content;
+	margin-top: 13px;
+	@include font(12px, italic, 600, $var9, 15px, -0.29px);
+}
+
+.sick-form-block {
+	position: relative;
+	margin-top: 14px;
+	display: inline-block;
+	@include size(max-content, 100%);
+}
+
+.own-status-change {
+	position: relative;
+	margin-top: 12px;
+	width: max-content;
+	@include font(12px, italic, 600, $var9, 17px, -0.29px);
+}
+
+.own-form-block {
+	position: relative;
+	margin-top: 17px;
+	display: inline-block;
+	@include size(max-content, 100%);
+}
+
+.own-dates {
+	position: absolute;
+	padding-top: 3px;
+	padding-right: 4px;
+}
+
+.sick-dates {
+	position: absolute;
+	padding-top: 4px;
+	margin-left: 1px;
+}
+
+.sick-comment {
+	position: absolute;
+	top: 408px;
+}
+
+.own-comment {
+	position: absolute;
+	top: 323.5px;
+}

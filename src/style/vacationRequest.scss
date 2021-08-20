@@ -1,0 +1,250 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.new-vacation-request-form {
+	grid-area: vacation-request;
+	position: relative;
+	left: 120px;
+	background: $var4;
+	box-shadow: 0px 1px 3px rgba(32, 75, 146, 0.15);
+	border-radius: 5px;
+	width: 470px;
+	right: 80px;
+}
+
+.vacation {
+	width: inherit;
+}
+
+.form-block {
+	position: relative;
+	height: max-content;
+	top: 160px;
+}
+
+.text-like-title {
+	display: inline-block;
+	width: max-content;
+	margin: 26px 0 0 30px;
+	@include font(18px, normal, 600, $var2, 24px, normal);
+}
+
+.calendar-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 14px;
+}
+
+.datepicker-container label {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+	font-size: 13px;
+}
+
+.react-datepicker-wrapper {
+	display: block;
+	@include size(36px, 100%);
+}
+
+.react- picker__input-container {
+	display: block;
+}
+
+.start-date {
+	grid-area: start;
+	border: 1px solid $var5;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding-left: 2px;
+	@include font(13px, normal, normal, $var2, 36px, -0.006em);
+	align-items: center;
+	display: inline-block;
+	outline: none;
+}
+
+.end-date {
+	@include font(13px, normal, normal, $var2, 36px, -0.006em);
+	align-items: center;
+	grid-area: end;
+	border: 1px solid $var5;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding-left: 2px;
+	display: inline-block;
+	outline: none;
+}
+
+.dates-name {
+	position: relative;
+	width: max-content;
+}
+
+.dates-block-vacation {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-row-gap: 8px;
+	grid-template-rows: 18px 36px;
+	grid-template-columns: 140px 140px 60px;
+	grid-template-areas: "d d d" "start end count";
+	margin: 9px 0 0 30px;
+	width: 100%;
+}
+
+.dates-block-own {
+	display: grid;
+	grid-column-gap: 10px;
+	grid-row-gap: 6px;
+	grid-template-rows: 18px 36px;
+	grid-template-columns: 176px 174px;
+	grid-template-areas: "d d " "start end";
+	margin: 11px 0 0 30px;
+	width: 100%;
+}
+
+.dates-block-leave {
+	display: grid;
+	grid-column-gap: 8px;
+	grid-row-gap: 5px;
+	grid-template-rows: auto 20px 36px;
+	grid-template-columns: 176px 176px;
+	grid-template-areas: "important important" "d d " "start end";
+	margin: 12px 0 0 30px;
+	width: 100%;
+}
+
+.text-important {
+	grid-area: important;
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 18.5px;
+	letter-spacing: -0.587px;
+	margin: 1.5px 0 15px 0;
+	color: $var2;
+
+	span {
+		font-weight: 750;
+	}
+}
+
+.day-count {
+	grid-area: count;
+	background: $var1;
+	@include border(none, 1px solid $var5, 4px, border-box);
+	padding-left: 8px;
+	@include font(13px, normal, normal, $var18, 18px, -0.006em);
+	display: flex;
+	align-items: center;
+}
+
+.text-like-subtitle {
+	@include font(13px, normal, 600, $var2, 18px, normal);
+}
+
+.text-like-comment {
+	@include font(13px, normal, 400, $var19, 18px, normal);
+}
+
+.question-icon {
+	margin-left: 5px;
+	position: relative;
+	top: 3px;
+	height: 14.5px;
+	cursor: pointer;
+
+	&:hover {
+		filter: invert(60%) sepia(36%) saturate(5916%) hue-rotate(199deg) brightness(101%) contrast(108%);
+	}
+}
+
+.comment-block {
+	display: grid;
+	position: absolute;
+	bottom: 85px;
+	left: 30px;
+	width: 361px;
+	grid-row-gap: 5px;
+	grid-template-rows: 18px auto;
+	grid-template-areas: "d" "comment";
+}
+
+.comment-input {
+	margin-top: 2px;
+	grid-area: comment;
+	outline: none;
+	@include size(80px, 100%);
+	@include border(none, 1px solid $var5, 4px, border-box);
+	background-color: $var4;
+	resize: none;
+	padding: 10px;
+	font-size: 13px;
+}
+
+.button-and-link {
+	display: grid;
+	grid-template-areas: "submit-btn  link-block";
+	grid-template-columns: 125px 235px;
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	width: 360px;
+}
+
+.submit-button {
+	grid-area: submit-btn;
+	@include size(36px, 120px);
+	background: $var8;
+	@include border(none, none, 3px, border-box);
+	@include font(12px, normal, 600, $var4, 23px, 0.01em);
+	display: flex;
+	align-items: center;
+	text-align: center;
+	padding-left: 19px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.link-block {
+	grid-area: link-block;
+	position: absolute;
+	top: 48%;
+	right: 0px;
+	transform: translateY(-52%);
+	width: max-content;
+}
+
+.text-before-link {
+	margin-right: 5px;
+	@include font(13px, normal, normal, $var11, 18px, -0.31px);
+	text-align: right;
+}
+
+.text-like-link {
+	@include font(13px, normal, normal, $var8, 18px, -0.31px);
+	text-decoration: none;
+}
+
+.leave-requests-content {
+	grid-area: leave-requests;
+	background: $var4;
+	box-shadow: 0px 1px 3px rgba(32, 75, 146, 0.15);
+	border-radius: 5px;
+	@include size(671px, 100%);
+	overflow-y: auto;
+}
+
+.title-for-leave-requests {
+	position: relative;
+	width: max-content;
+	@include font(18px, normal, 600, $var2, 24px, normal);
+	margin: 21px 0 18px 24px;
+}
+
+.empty-list {
+	position: absolute;
+	height: 286px;
+	left: 55.62%;
+	right: 26.32%;
+	top: 273px;
+}

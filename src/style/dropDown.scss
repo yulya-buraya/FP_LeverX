@@ -1,0 +1,57 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+ul {
+	position: absolute;
+	z-index: 1;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	left: 30px;
+	right: 80px;
+	border-radius: 0px 0px 5px 5px;
+	border-top: none;
+	background-color: $var4;
+	box-shadow: 0px 0px 1.5px $var2;
+}
+li a {
+	display: block;
+	text-decoration: none;
+	font-family: "Open Sans", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+	align-items: center;
+	color: $var2;
+	border-radius: 5px;
+	padding: 8px;
+}
+li:last-child {
+	border-bottom: none;
+}
+li:hover {
+	background-color: $var3;
+	color: $var4;
+}
+.dropdown-blocked {
+	background-color: $var1;
+}
+.request-list {
+	margin: 11px auto auto 29px;
+	@include size(36px, 360px);
+	background: $var4;
+	@include border(none, 1px solid $var5, 4px, border-box);
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	@include font(13px, normal, normal, $var2, 17px, -0.006em);
+	align-items: center;
+	padding: 10px;
+	background-image: url(/image/Polygon.svg);
+	background-repeat: no-repeat;
+	background-position: 335px;
+	&.blocked {
+		background-color: $var1;
+	}
+}

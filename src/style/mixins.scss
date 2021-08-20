@@ -1,0 +1,20 @@
+@mixin size($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin font($size, $style, $weight, $color, $line-height, $letter-spacing) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    color: $color;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin border($outline, $border, $border-radius, $box-sizing) {
+    outline: $outline;
+    border: $border;
+    border-radius: $border-radius;
+    box-sizing: $box-sizing;
+}
